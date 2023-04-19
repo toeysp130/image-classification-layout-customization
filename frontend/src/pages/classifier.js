@@ -53,7 +53,7 @@ const Classifier = () => {
     const formData = new FormData();
     formData.append('image', files[0], files[0].name);
     
-    axios.post('http://127.0.0.1:8000/api/classifier/', formData, {
+    axios.post('http://192.168.1.97:8000/api/classifier/', formData, {
       headers: {
         'accept': 'application/json',
         'content-type': 'multipart/form-data'
@@ -66,7 +66,7 @@ const Classifier = () => {
   };
   
   const getClassificationResult = (obj) => {
-    axios.get(`http://127.0.0.1:8000/api/classifier/${obj.data.id}/`, {
+    axios.get(`http://192.168.1.97:8000/api/classifier/${obj.data.id}/`, {
       headers: {
         'accept': 'application/json',
       }
